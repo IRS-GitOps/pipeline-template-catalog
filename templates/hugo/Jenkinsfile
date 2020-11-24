@@ -13,9 +13,9 @@ pipeline {
     skipDefaultCheckout true
     preserveStashes(buildCount: 2)
   }
-  triggers {
-    eventTrigger jmespathQuery("action=='closed' && repository.full_name=='${repoOwner}/${repo}'")
-  }
+  //triggers {
+  //eventTrigger jmespathQuery("action=='closed' && repository.full_name=='${repoOwner}/${repo}'")
+  //}
   environment {
     repoOwner = "${repoOwner}"
     repo = "${repo}"
